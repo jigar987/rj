@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function isArmstrongNumber(num) {
+    // Convert number to string to find the number of digits
+    let numStr = num.toString();
+    let numDigits = numStr.length;
+    
+    // Sum the digits raised to the power of the number of digits
+    let sum = 0;
+    for (let i = 0; i < numDigits; i++) {
+        sum += Math.pow(parseInt(numStr[i]), numDigits);
+    }
+
+    // Check if the sum is equal to the original number
+    return sum === num;
+}
+
+// Test the function
+let number = 153; // You can change this to test with different numbers
+if (isArmstrongNumber(number)) {
+    console.log(number + " is an Armstrong number.");
+} else {
+    console.log(number + " is not an Armstrong number.");
+}
+
+
+    </script>
+    
+</body>
+</html>
+
+
